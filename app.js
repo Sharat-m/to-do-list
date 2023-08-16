@@ -72,7 +72,7 @@ app.get("/", function (req, res) {
  res.redirect("/");
   } else {
       // Render the view and pass the foundItems to the view
-      res.render("List", { listTitle: "Today", newListItems: foundItems });
+      res.render("list", { listTitle: "Today", newListItems: foundItems });
   }
     })
     .catch(function(err) {
