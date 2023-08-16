@@ -5,6 +5,7 @@ const _= require("lodash");
 const { name } = require("ejs");
 const PORT = process.env.PORT || 3000
 
+mongoose.set('strictQuery', false);
 const app = express();
 
 app.set("view engine", "ejs");
@@ -12,7 +13,6 @@ app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
- 
 mongoose.connect("mongodb+srv://sharat-admin:4SF19me413%40@cluster0.smnfjxx.mongodb.net/todolistDB", { useNewUrlParser: true }); //step 2 :create a todolistDB database and connect it
 //step 3: create schema
 const itemsSchema = new mongoose.Schema({ 
