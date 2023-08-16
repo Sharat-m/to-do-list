@@ -3,6 +3,7 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose"); //step 1
 const _= require("lodash");
 const { name } = require("ejs");
+const PORT = process.env.PORT || 3000
 
 const app = express();
 
@@ -186,6 +187,6 @@ app.get("/about", function (req, res) {
 
 
 //start the server 3000
-app.listen(3000, function () {
+app.listen(PORT, function () {
   console.log("server started on port 3000.");
 });
